@@ -9,6 +9,9 @@
   --ligt-background-button-color: #f5f4fa;
   --inner-border-color: #eeeeee;
   --background-dark-color: #2f303a;
+  --icon-grey-color: #afb1b8;
+  --background-dark-icon-color: rgba(255, 255, 255, 0.1);
+  --line-header-color: #ececec;
 
   --logo-font-family: 'Raleway', sans-serif;
   --primary-font-family: 'Roboto', sans-serif;
@@ -98,7 +101,6 @@ footer {
 .page-header-container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 
 .logotype {
@@ -110,11 +112,11 @@ footer {
 }
 
 .web {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .studio {
-  color: #000000;
+  color: var(--black-logo-color);
 }
 
 .title {
@@ -134,6 +136,11 @@ footer {
 /* =================== /COMPONENTS =================== */
 
 /* =================== HEADER =================== */
+
+.page-header {
+  background-color: var(--text-white-color);
+  border-bottom: 1px solid var(--line-header-color);
+}
 
 .icon-envelope {
   margin-right: 10px;
@@ -415,25 +422,25 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 16px;
 }
 
 .icon-sotial-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px;
-  margin-top: 16px;
   width: 44px;
   height: 44px;
-  color: #afb1b8;
-  cursor: pointer;
+  background-color: var(--text-white-color);
+  color: var(--icon-grey-color);
+  border-radius: 50%;
 }
 
 .icon-sotial-link:hover,
 .icon-sotial-link:focus {
   color: var(--text-white-color);
   background-color: var(--accent-color);
-  border-radius: 50%;
+
 }
 
 .icon-sotial-item:not(:last-child) {
@@ -461,15 +468,15 @@ footer {
   height: 92px;
   justify-content: center;
   align-items: center;
-  color: #afb1b8;
-  border: 1px solid #afb1b8;
+  color: var(--icon-grey-color);
+  border: 1px solid var(--icon-grey-color);
   border-radius: 4px;
 }
 
 .regular-customers-link:hover,
 .regular-customers-link:focus {
-  color: #2196f3;
-  border: 1px solid #2196f3;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .icon-company {
@@ -501,7 +508,6 @@ footer {
 
 .address-list-location {
   font-family: var(--primary-font-family);
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -517,7 +523,6 @@ footer {
 
 .footer-contact {
   font-family: var(--primary-font-family);
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -567,8 +572,8 @@ footer {
   justify-content: center;
   width: 44px;
   height: 44px;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-white-color);
+  background-color: var(--background-dark-icon-color);
   border-radius: 50%;
 }
 
@@ -650,6 +655,15 @@ footer {
   flex-wrap: wrap;
   gap: var(--card-set-gap);
   flex-basis: calc((100-90px) / 3);
+}
+
+.works-link {
+  display: block;
+}
+
+.works-link:hover,
+.works-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .list-content {
