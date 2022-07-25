@@ -112,11 +112,6 @@ button {
   margin-bottom: 50px;
 }
 
-.current {
-  color: var(--accent-blue-color);
-}
-
-
                     /* Main page */
 
                     /* Header */
@@ -178,6 +173,10 @@ button {
 
 .menu-link:hover,
 .menu-link:focus {
+  color: var(--accent-blue-color);
+}
+
+.current {
   color: var(--accent-blue-color);
 }
 
